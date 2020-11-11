@@ -51,6 +51,6 @@ Please make sure to update tests as appropriate.
 1. [Github](https://github.com/nicoleremy95/pokedex)
 
 ### Link to Deployed Application
-1. [Budget Tracker]()
+1. [Pokedex]()
     
      

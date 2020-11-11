@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Pokedex from '../pokedex/Pokedex';
 import './Pokegame.css'
 
 
@@ -25,14 +26,12 @@ class Pokegame extends Component{
             let randomPokemon = hand2.splice(randomIndex, 1);
             hand1.push(randomPokemon);
         }
-        console.log('hand1', hand1)
-        console.log('hand2', hand2)
        
         return(
             <div className="Pokegame">
                 <h1>POKEGAME</h1>
-                {/* <div>{hand2.name}</div> */}
-                {/* <div>{hand1.type}</div> */}
+                <Pokedex pokemon={hand1}/>
+                <Pokedex pokemon={hand2}/>
             </div>
         )
     

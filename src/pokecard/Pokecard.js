@@ -1,7 +1,17 @@
 import React, {Component} from 'react';
 import './Pokecard.css'
 
-const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+// const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
+const POKE_API = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/';
+
+// let newId = function(number){
+//     if(number <= 999){
+//         return `00${number}.slice(-3)`
+//     }
+// }
+let newId = (num) => (num <= 999 ? `00${num}`.slice(-3): num)
+
+
 
 class Pokecard extends Component {
     render(){

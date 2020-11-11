@@ -20,22 +20,14 @@ class Pokegame extends Component{
         let hand1 = [];
         let hand2 = [...this.props.pokemon];
        
-        // while (hand1< hand2){
-        //     let randomIndex 
-        // }
+        while (hand1.length< hand2.length){
+            let randomIndex = Math.floor(Math.random() * hand2.length);
+            let randomPokemon = hand2.splice(randomIndex, 1);
+            hand1.push(randomPokemon);
+        }
+        console.log('hand1', hand1)
+        console.log('hand2', hand2)
        
-        //attempt 1
-        // let array = this.props.pokemon;
-        // let randomArray = array[Math.floor(Math.random() * array.length)]
-        // for(let i = 0; i < randomArray.length; i ++){
-        //     if(i<4){
-        //         hand1.push(randomArray[i])
-        //     } else {
-        //         hand2.push(randomArray[i])
-        //     }
-        // }
-
-
         return(
             <div className="Pokegame">
                 <h1>POKEGAME</h1>
@@ -43,7 +35,9 @@ class Pokegame extends Component{
                 {/* <div>{hand1.type}</div> */}
             </div>
         )
+    
     }
 }
+
 
 export default Pokegame; 

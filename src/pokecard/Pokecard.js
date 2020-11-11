@@ -15,7 +15,7 @@ let newId = (num) => (num <= 999 ? `00${num}`.slice(-3): num)
 
 class Pokecard extends Component {
     render(){
-        let imgSrc = `${POKE_API}${this.props.id}.png`
+        let imgSrc = `${POKE_API}${newId(this.props.id)}.png`
         return(
             <div className="Pokecard">
                     <h3 className="Pokecard-title">{this.props.name}</h3>

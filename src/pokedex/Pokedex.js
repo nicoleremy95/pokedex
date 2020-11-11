@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Pokecard from '../pokecard/Pokecard';
-import Pokegame from '../pokegame/Pokegame';
 import './Pokedex.css'
 
 class Pokedex extends Component{
@@ -20,6 +19,8 @@ class Pokedex extends Component{
         return(
             <div className="Pokedex">
                 <h1>POKEDEX</h1>
+                <p>total experience:{this.props.expTotal}</p>
+                <p>{this.props.isWinner ? "Winner!" : "Loser!"}</p>
                 <div className="Pokedex-cards">
                     {this.props.pokemon.map(character => (
                         <Pokecard id={character.id} name={character.name} type = {character.type} exp={character.exp}/>

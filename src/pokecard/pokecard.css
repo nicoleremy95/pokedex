@@ -10,7 +10,9 @@
 }
 
 .Pokecard-title{
-    font-size: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 1.5rem;
 }
 
 .Pokecard-data{
